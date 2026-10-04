@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e2e"/>
+      <stop offset="100%" stop-color="#11111b"/>
+    </linearGradient>
+
+    <!-- Cyan Glow Gradient -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+
+    <!-- Green Leaf Gradient -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a6e3a1"/>
+      <stop offset="100%" stop-color="#57cc99"/>
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Neon Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- App Squircle Base -->
+  <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="url(#bgGrad)" stroke="#313244" stroke-width="6" filter="url(#shadow)"/>
+
+  <!-- Battery Terminal (Top Nipple) -->
+  <path d="M 216 90 L 296 90 C 304 90 310 96 310 104 L 310 115 L 202 115 L 202 104 C 202 96 208 90 216 90 Z" fill="#45475a"/>
+
+  <!-- Battery Outer Shell -->
+  <rect x="140" y="115" width="232" height="320" rx="36" ry="36" fill="#181825" stroke="#45475a" stroke-width="12"/>
+
+  <!-- Battery Level (Charged to 60% Conservation Level) -->
+  <rect x="156" y="245" width="200" height="174" rx="22" ry="22" fill="url(#cyanGrad)" opacity="0.25"/>
+  <line x1="140" y1="245" x2="372" y2="245" stroke="#00b4d8" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
+
+  <!-- Shield Shape (Protection / Conservation) -->
+  <g filter="url(#glow)">
+    <path d="M 256 160 C 310 160 345 180 345 180 C 345 285 280 345 256 365 C 232 345 167 285 167 180 C 167 180 202 160 256 160 Z" 
+          fill="#1e1e2e" stroke="url(#cyanGrad)" stroke-width="14" stroke-linejoin="round"/>
+
+    <!-- Eco Leaf Inside Shield -->
+    <path d="M 256 205 C 285 205 305 228 305 258 C 305 288 280 315 256 325 C 232 315 207 288 207 258 C 207 228 227 205 256 205 Z" 
+          fill="url(#greenGrad)"/>
+    <path d="M 256 215 L 256 315" stroke="#1e1e2e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 256 250 L 280 238" stroke="#1e1e2e" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 256 275 L 234 263" stroke="#1e1e2e" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 256 295 L 275 285" stroke="#1e1e2e" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
