@@ -2,6 +2,10 @@
 
 A lightweight, modern Linux GUI utility to monitor battery status and control **Lenovo Conservation Mode** on IdeaPad laptops.
 
+<p align="center">
+  <img src="assets/screenshot.png" alt="Lenovo Battery Care Screenshot" width="440">
+</p>
+
 ---
 
 ## 🌟 Features
@@ -41,6 +45,8 @@ python3 app.py
 ```text
 lenovo-battery-manager/
 ├── app.py           # Main GUI application (Python 3 + Tkinter)
+├── assets/
+│   └── screenshot.png # App screenshot
 ├── icon.svg         # High-resolution vector icon
 ├── install.sh       # Automated installer script
 ├── uninstall.sh     # Clean uninstaller script
